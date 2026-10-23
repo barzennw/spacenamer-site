@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceNamer Compatibility: macOS Versions and Macs</title>
+  <meta name="description" content="Which macOS versions and Macs SpaceNamer supports — Apple silicon with macOS Ventura or later — and how each new macOS release is tested.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="SpaceNamer Compatibility: macOS Versions and Macs">
+  <meta property="og:description" content="Which macOS versions and Macs SpaceNamer supports — Apple silicon with macOS Ventura or later — and how each new macOS release is tested.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/compatibility.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpaceNamer Compatibility: macOS Versions and Macs">
+  <meta name="twitter:description" content="Which macOS versions and Macs SpaceNamer supports — Apple silicon with macOS Ventura or later — and how each new macOS release is tested.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Compatibility</p>
+      <h1>Which Macs and which macOS.</h1>
+      <p class="lede">SpaceNamer runs on Apple silicon Macs with macOS Ventura or later. Every release is tested on each macOS version it supports, and new ones are tested the week they ship.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="table-wrap">
+        <table>
+          <caption>Current release: SpaceNamer <span class="todo">[version]</span>, tested
+            <span class="todo">[date]</span>.
+            <!-- TODO: update the version and test date with each release --></caption>
+          <thead>
+            <tr>
+              <th scope="col">macOS</th>
+              <th scope="col">Version</th>
+              <th scope="col">Status</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">macOS 27</th><td>27.x</td><td><span class="pill pill-ok">Supported</span></td><td>Current release of macOS.</td></tr>
+            <tr><th scope="row">macOS Tahoe</th><td>26.x</td><td><span class="pill pill-ok">Supported</span></td><td>&mdash;</td></tr>
+            <tr><th scope="row">macOS Sequoia</th><td>15.x</td><td><span class="pill pill-ok">Supported</span></td><td>&mdash;</td></tr>
+            <tr><th scope="row">macOS Sonoma</th><td>14.x</td><td><span class="pill pill-ok">Supported</span></td><td>&mdash;</td></tr>
+            <tr><th scope="row">macOS Ventura</th><td>13.x</td><td><span class="pill pill-ok">Supported</span></td><td>Minimum supported version.</td></tr>
+            <tr><th scope="row">macOS Monterey and earlier</th><td>12.x and below</td>
+              <td><span class="pill pill-off">Not supported</span></td>
+              <td>SpaceNamer will not launch.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h2>Hardware</h2>
+        <div class="cards cards-2">
+          <div class="card">
+            <h3>Apple silicon &mdash; supported</h3>
+            <p>Every Mac with an M-series chip. SpaceNamer is built natively for Apple silicon.</p>
+          </div>
+          <div class="card">
+            <h3>Intel Macs &mdash; not supported</h3>
+            <p>There is no Intel build, and Rosetta does not help: the app ships as an Apple silicon binary only.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>What it needs from macOS</h2>
+        <ul class="prose">
+          <li><b>No Accessibility permission.</b> Nothing to approve in System Settings &rarr; Privacy &amp; Security.</li>
+          <li><b>No Screen Recording permission.</b> SpaceNamer never reads the contents of your screen.</li>
+          <li><b>No System Integrity Protection changes.</b> Nothing is injected into macOS, so it is fine on a
+            managed work Mac.</li>
+          <li><b>No network access for day-to-day use.</b> The only request it ever makes is the license check.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>How each macOS release is tested</h2>
+        <p class="measure muted">When Apple ships a new version of macOS, SpaceNamer is tested on it that week and
+          this page is updated with the result. Each test covers the things most likely to break:</p>
+        <ul class="prose">
+          <li>Detecting every desktop, on one display and on several.</li>
+          <li>Naming a desktop and seeing that name in the menu bar.</li>
+          <li>Switching to each desktop by clicking its name.</li>
+          <li>Names surviving a restart and surviving Mission Control reordering.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <p><b>If a macOS update breaks something,</b> tell us &mdash; a report on the day of a release is worth a
+          great deal. Write to <span class="todo">[support email]</span> with your macOS version and what you saw.
+          <!-- TODO: support email --> Fixes for macOS compatibility are free, like every other update.</p>
+      </div>
+
+      <div>
+        <h2>Beta versions of macOS</h2>
+        <p class="measure muted">SpaceNamer is tested against public betas where possible, but a beta can change
+          behaviour after that test. If you run beta macOS, expect the occasional surprise and please report it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="container cta">
+      <h2>Stop guessing which desktop you&rsquo;re on.</h2>
+      <p>One purchase, three Macs, no permissions, 30 days to change your mind.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a>
+        <a class="btn btn-secondary" href="download.html">Download for Apple silicon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

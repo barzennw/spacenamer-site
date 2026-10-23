@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceNamer Privacy Policy</title>
+  <meta name="description" content="SpaceNamer has no account, no analytics and no tracking. Your desktop names stay on your Mac; the only network request is a license check.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="SpaceNamer Privacy Policy">
+  <meta property="og:description" content="SpaceNamer has no account, no analytics and no tracking. Your desktop names stay on your Mac; the only network request is a license check.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/privacy.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpaceNamer Privacy Policy">
+  <meta name="twitter:description" content="SpaceNamer has no account, no analytics and no tracking. Your desktop names stay on your Mac; the only network request is a license check.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Privacy</p>
+      <h1>SpaceNamer does not watch you.</h1>
+      <p class="lede">No account, no analytics, no tracking. The only time the app contacts a server is to check your license. Your desktop names never leave your Mac.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container">
+      <div class="with-toc">
+        <aside class="toc"><b>On this page</b><a href="#summary">Summary</a><a href="#stays">What stays on your Mac</a><a href="#leaves">What leaves your Mac</a><a href="#payment">Payment</a><a href="#website">This website</a><a href="#not-collected">What is never collected</a><a href="#retention">How long it is kept</a><a href="#rights">Your rights</a><a href="#children">Children</a><a href="#changes">Changes</a><a href="#contact">Contact</a></aside>
+        <div class="prose">
+          <p class="caption">Last updated <span class="todo">[date]</span>.
+            <!-- TODO: date this policy when you publish it --></p>
+
+          <div class="note" style="margin:var(--space-6) 0">
+            <p><b>This is a draft.</b> It describes accurately what the app does, but it has not been reviewed by a
+              lawyer and the placeholders below still need filling in. Have it checked before you take payments.
+              <!-- TODO: legal review --></p>
+          </div>
+
+          <h2 id="summary">Summary</h2>
+          <p>SpaceNamer is a menu bar app that names your Mac&rsquo;s desktops. It has no account system, collects no
+            analytics and contains no tracking of any kind. The names and emoji you choose are stored on your own Mac
+            and are never transmitted anywhere. The single exception is license activation, described below.</p>
+
+          <h2 id="stays">What stays on your Mac</h2>
+          <p>All of the following is stored locally in SpaceNamer&rsquo;s preferences and never sent anywhere:</p>
+          <ul>
+            <li>The names and emoji you assign to each desktop.</li>
+            <li>The identifiers macOS uses for your desktops and displays, which are what those names are attached to.</li>
+            <li>Your preference for launching at login.</li>
+            <li>Your license key and the activation record for this Mac, after activation.</li>
+          </ul>
+          <p>Deleting the app and its preferences removes all of it. Nothing is synced between your Macs, which is
+            why a second Mac starts with default names.</p>
+
+          <h2 id="leaves">What leaves your Mac</h2>
+          <p>SpaceNamer makes network requests for exactly one purpose: checking that your license is valid. This
+            happens when you activate a key, when you remove it, and during a quiet revalidation roughly every two
+            weeks. Those requests go to our licensing provider,
+            <a href="https://www.kelviq.com/buyer-privacy/" rel="noopener">Kelviq</a>, and contain:</p>
+          <ul>
+            <li>Your license key.</li>
+            <li>An activation identifier that stands for this Mac&rsquo;s seat, so a seat can later be freed.</li>
+            <li>The network metadata any web request carries, such as your IP address.</li>
+          </ul>
+          <p>Your desktop names, your emoji, the apps you run and anything on your screen are <strong>not</strong>
+            part of these requests. If the network is unavailable the app keeps working offline.</p>
+
+          <h2 id="payment">Payment</h2>
+          <p>Purchases are handled by <a href="https://www.kelviq.com/buyer-privacy/" rel="noopener">Kelviq</a>, who are the merchant of record for every sale &mdash;
+            they take the payment, handle tax, and manage refunds and order enquiries. We never see or store your
+            card details. We do receive the email address you buy with, so we can send your license key and reply to
+            support.</p>
+
+          <h2 id="website">This website</h2>
+          <p>This site is hosted by <span class="todo">[host]</span> and uses
+            <span class="todo">[analytics: none, or which tool]</span>.
+            <!-- TODO: state the host and whether any analytics run. If you add analytics, say which, what it
+                 stores, and whether it uses cookies. --> No cookies are set by this site for tracking or
+            advertising.</p>
+
+          <h2 id="not-collected">What is never collected</h2>
+          <ul>
+            <li>No analytics, telemetry or usage statistics.</li>
+            <li>No crash reports sent automatically.</li>
+            <li>No screen contents &mdash; the app never requests Screen Recording permission.</li>
+            <li>No keystrokes &mdash; the app never requests Accessibility permission.</li>
+            <li>No list of your apps, files, windows or browsing.</li>
+            <li>No advertising identifiers, and no data sold or shared with advertisers.</li>
+          </ul>
+
+          <h2 id="retention">How long it is kept</h2>
+          <p>Local data stays on your Mac until you delete it. License and purchase records are kept by our providers
+            for as long as needed to support the license and to meet tax and accounting obligations, typically
+            <span class="todo">[retention period]</span>. <!-- TODO: confirm with your providers --></p>
+
+          <h2 id="rights">Your rights</h2>
+          <p>Depending on where you live, you may have the right to access, correct, export or delete the personal
+            data we hold &mdash; in practice your email address and license record. Write to the address below and we
+            will action it. You may also complain to your local data protection authority.</p>
+          <p>The data controller is <span class="todo">[legal entity name and address]</span>.
+            <!-- TODO: required for GDPR. Name the entity or person and a postal address. --></p>
+
+          <h2 id="children">Children</h2>
+          <p>SpaceNamer is a productivity tool for general audiences and is not directed at children under 13. We do
+            not knowingly collect personal data from them.</p>
+
+          <h2 id="changes">Changes</h2>
+          <p>If this policy changes, the date at the top changes with it. Material changes will be noted on the
+            <a href="changelog.html">changelog</a>.</p>
+
+          <h2 id="contact">Contact</h2>
+          <p>Privacy questions go to <span class="todo">[support email]</span>, same as everything else.
+            <!-- TODO: support email --></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

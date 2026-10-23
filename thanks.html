@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you for buying SpaceNamer</title>
+  <meta name="description" content="Your SpaceNamer license key is on its way. Download the app, enter the key, and name your desktops.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="Thank you for buying SpaceNamer">
+  <meta property="og:description" content="Your SpaceNamer license key is on its way. Download the app, enter the key, and name your desktops.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/thanks.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thank you for buying SpaceNamer">
+  <meta name="twitter:description" content="Your SpaceNamer license key is on its way. Download the app, enter the key, and name your desktops.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Thank you</p>
+      <h1>That&rsquo;s the payment done.</h1>
+      <p class="lede">Your license key is on its way to the email address you bought with. Here is what to do with it.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="flow">
+        <div class="flow-item">
+          <div>
+            <h3>Find your key</h3>
+            <p>Kelviq emails it to you right after checkout, and it is also on your order page in the
+              <a href="#" data-portal>customer portal</a>. If the email has not arrived in a few minutes, check
+              spam before writing to us.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>Get the app</h3>
+            <p>If you have not downloaded SpaceNamer yet, do that now &mdash; it is free to download, and your key
+              is what unlocks it.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>Enter the key</h3>
+            <p>Open SpaceNamer, click its menu bar item, choose <b>Enter License&hellip;</b> and paste the key.
+              That activates this Mac. You have three activations.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>Name your desktops</h3>
+            <p>Menu &rarr; <b>Rename Spaces&hellip;</b>. The <a href="guide.html">guide</a> covers the rest,
+              including the one thing to do after each launch.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn btn-primary" href="download.html">Download SpaceNamer</a>
+        <a class="btn btn-secondary" href="guide.html">Read the guide</a>
+      </div>
+
+      <div class="note">
+        <p><b>Something not right?</b> Write to <a href="#" data-mailto></a> with your order email and we will sort
+          it out. The 30-day refund stands, no reason needed &mdash; see <a href="terms.html">terms</a>.</p>
+      </div>
+
+      <p class="caption">This page confirms you finished checkout, not that payment cleared &mdash; your receipt
+        and license email are the record of that.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

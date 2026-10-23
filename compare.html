@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceNamer vs Spaceman vs WhichSpace</title>
+  <meta name="description" content="How SpaceNamer compares with Spaceman, WhichSpace and plain macOS for naming and switching desktops — including when you should use the free tools instead.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="SpaceNamer vs Spaceman vs WhichSpace">
+  <meta property="og:description" content="How SpaceNamer compares with Spaceman, WhichSpace and plain macOS for naming and switching desktops — including when you should use the free tools instead.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/compare.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpaceNamer vs Spaceman vs WhichSpace">
+  <meta name="twitter:description" content="How SpaceNamer compares with Spaceman, WhichSpace and plain macOS for naming and switching desktops — including when you should use the free tools instead.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html" aria-current="page">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Compare</p>
+      <h1>SpaceNamer next to the alternatives.</h1>
+      <p class="lede">Three tools name Mac desktops, and macOS names none of them. Here is what each one actually does, so you can pick the cheapest thing that solves your problem &mdash; even if that is not this one.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="table-wrap">
+        <table>
+          <caption>Feature comparison. Competitor details last checked <span class="todo">[date]</span>.
+            <!-- TODO: re-check Spaceman and WhichSpace before launch and put the date here --></caption>
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col" class="col-own">SpaceNamer</th>
+              <th scope="col">Spaceman</th>
+              <th scope="col">WhichSpace</th>
+              <th scope="col">macOS alone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Full-length names</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td>Up to 3 characters</td><td>Numbers only</td><td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Emoji per desktop</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Name shown in the menu bar</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Switch desktop by clicking a name</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td>Swipe or Mission Control</td>
+            </tr>
+            <tr>
+              <th scope="row">Separate list per display</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td>Mirrors one item across displays</td><td>&mdash;</td>
+            </tr>
+            <tr>
+              <th scope="row">Needs the Accessibility permission</th>
+              <td class="col-own"><span class="no">No</span></td><td class="muted">Varies by version</td><td class="muted">Varies by version</td><td>&mdash;</td>
+            </tr>
+            <tr>
+              <th scope="row">Needs System Integrity Protection disabled</th>
+              <td class="col-own"><span class="no">No</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td>&mdash;</td>
+            </tr>
+            <tr>
+              <th scope="row">Signed and notarized by Apple</th>
+              <td class="col-own"><span class="yes">Yes</span></td><td class="muted">Check the project</td><td class="muted">Check the project</td><td>&mdash;</td>
+            </tr>
+            <tr>
+              <th scope="row">Price</th>
+              <td class="col-own">$6.99 once, 3 Macs</td><td>Free, open source</td><td>Free, open source</td><td>Included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h2>When you should not buy SpaceNamer</h2>
+        <div class="cards cards-3">
+          <div class="card">
+            <h3>Two or three desktops</h3>
+            <p>If you can hold your layout in your head, macOS on its own is fine. This tool earns its keep at around
+              five desktops.</p>
+          </div>
+          <div class="card">
+            <h3>A three-letter label is enough</h3>
+            <p>If <code>EML</code> and <code>DEV</code> tell you everything you need, Spaceman is free and does that
+              well. Take the free one.</p>
+          </div>
+          <div class="card">
+            <h3>You never switch from the menu bar</h3>
+            <p>If keyboard shortcuts already take you everywhere, you are paying mostly for the label.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>What you are paying for</h2>
+        <ul class="prose">
+          <li><b>Real names, not abbreviations.</b> &ldquo;Harbor &amp; Pine&rdquo; instead of <code>H&amp;P</code>,
+            with an emoji in front of it.</li>
+          <li><b>One-click switching that uses no permissions.</b> Clicking a name hands focus to a window on that
+            desktop and macOS does its own switch. Nothing fakes keystrokes, so nothing needs Accessibility.</li>
+          <li><b>Per-display lists.</b> Two monitors means two sets of desktops, listed separately with a checkmark
+            on each.</li>
+          <li><b>Maintenance.</b> Each new macOS release is tested the week it ships, and the result is published on
+            the <a href="compatibility.html">compatibility page</a>.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <p><b>About the free tools.</b> Spaceman and WhichSpace are open-source projects maintained by other people,
+          and they can change at any time. The notes above describe them as of the date in the table &mdash; check the
+          projects themselves before deciding.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="container cta">
+      <h2>Stop guessing which desktop you&rsquo;re on.</h2>
+      <p>One purchase, three Macs, no permissions, 30 days to change your mind.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a>
+        <a class="btn btn-secondary" href="download.html">Download for Apple silicon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

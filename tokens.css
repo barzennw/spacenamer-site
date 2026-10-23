@@ -1,0 +1,78 @@
+/* SpaceNamer website design tokens. Source of truth for Tailwind config and Figma variables. */
+:root {
+  /* Color: light */
+  --color-bg: #FFFFFF;
+  --color-bg-2: #F5F5F7;          /* section alternation, cards */
+  --color-bg-3: #EBEBEF;          /* menu bar mock, inset areas */
+  --color-fg: #1D1D1F;
+  --color-fg-2: #5C5C63;          /* secondary text, 6.6:1 on bg */
+  --color-fg-3: #8E8E96;          /* captions, decorative only */
+  --color-border: #D9D9DE;
+  --color-accent: #4F46E5;        /* indigo: buttons, links, checkmark */
+  --color-accent-hover: #4338CA;
+  --color-accent-fg: #FFFFFF;
+  --color-accent-soft: #EEF0FF;   /* accent tint backgrounds */
+  --color-ok: #1B8A4B;
+  --color-warn: #B45309;
+
+  /* Typography */
+  --font-sans: "Inter Variable", Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", "SF Mono", ui-monospace, Menlo, monospace;
+  --text-xs: 0.75rem;   /* 12 */
+  --text-sm: 0.875rem;  /* 14 */
+  --text-base: 1rem;    /* 16 */
+  --text-lg: 1.125rem;  /* 18 body on desktop */
+  --text-xl: 1.375rem;  /* 22 */
+  --text-2xl: 1.75rem;  /* 28 section H2 mobile */
+  --text-3xl: 2.25rem;  /* 36 section H2 desktop */
+  --text-4xl: 3rem;     /* 48 hero mobile */
+  --text-5xl: 4rem;     /* 64 hero desktop */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-body: 1.6;
+  --tracking-tight: -0.02em;
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem; --space-16: 4rem;
+  --space-24: 6rem; --space-32: 8rem;
+  --section-y: clamp(4rem, 10vw, 8rem);
+  --gutter: 1rem;                 /* phone */
+  --container: 72rem;             /* 1152 */
+  --measure: 62ch;                /* body text width */
+
+  /* Shape and elevation */
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px; --radius-xl: 24px; --radius-pill: 999px;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-2: 0 4px 12px rgb(0 0 0 / 0.08), 0 1px 3px rgb(0 0 0 / 0.06);
+  --shadow-window: 0 24px 60px rgb(0 0 0 / 0.18), 0 0 0 1px rgb(0 0 0 / 0.06); /* macOS window mock */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 400ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0F0F12; --color-bg-2: #1A1A1F; --color-bg-3: #26262D;
+    --color-fg: #F2F2F5; --color-fg-2: #A1A1AA; --color-fg-3: #6E6E78;
+    --color-border: #2C2C33;
+    --color-accent: #8B85FF; --color-accent-hover: #A5A0FF; --color-accent-fg: #0F0F12;
+    --color-accent-soft: #1E1D33;
+    --color-ok: #4ADE80; --color-warn: #FBBF24;
+    --shadow-window: 0 24px 60px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
+  }
+}
+:root[data-theme="dark"] {
+  --color-bg: #0F0F12; --color-bg-2: #1A1A1F; --color-bg-3: #26262D;
+  --color-fg: #F2F2F5; --color-fg-2: #A1A1AA; --color-fg-3: #6E6E78;
+  --color-border: #2C2C33;
+  --color-accent: #8B85FF; --color-accent-hover: #A5A0FF; --color-accent-fg: #0F0F12;
+  --color-accent-soft: #1E1D33;
+  --color-ok: #4ADE80; --color-warn: #FBBF24;
+  --shadow-window: 0 24px 60px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-slow: 0ms; }
+}

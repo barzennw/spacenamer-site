@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceNamer Guide: Name and Switch Mac Desktops</title>
+  <meta name="description" content="How to install SpaceNamer, name each Mac desktop with a name and emoji, switch from the menu bar, and work across multiple displays.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="SpaceNamer Guide: Name and Switch Mac Desktops">
+  <meta property="og:description" content="How to install SpaceNamer, name each Mac desktop with a name and emoji, switch from the menu bar, and work across multiple displays.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/guide.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpaceNamer Guide: Name and Switch Mac Desktops">
+  <meta name="twitter:description" content="How to install SpaceNamer, name each Mac desktop with a name and emoji, switch from the menu bar, and work across multiple displays.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html" aria-current="page">Guide</a><a href="compare.html">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Guide</p>
+      <h1>Set up SpaceNamer in two minutes.</h1>
+      <p class="lede">Install it, name your desktops, and switch between them from the menu bar. No permissions to grant and nothing in macOS to change.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>Install it</h3>
+            <p>Unzip the download, drag <b>SpaceNamer</b> into your Applications folder and open it. The build is
+              signed and notarized by Apple, so there are no warnings and no right-click tricks.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Look in the menu bar, not the Dock</h3>
+            <p>SpaceNamer has no Dock icon and no main window &mdash; it lives entirely in the menu bar. On first
+              launch it shows your current desktop&rsquo;s default name, like <code>Desktop 1</code>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Name your desktops</h3>
+            <p>Click the menu bar item and choose <b>Rename Spaces&hellip;</b>. Each desktop gets a row: type a name,
+              then click the emoji box and pick one from the macOS Emoji &amp; Symbols palette.</p>
+            <p>The menu bar updates as you type. Click <b>Done</b> when you are finished &mdash; there is nothing to save.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Switch with one click</h3>
+            <p>Open the menu and click any desktop&rsquo;s name. macOS performs its own animated switch, exactly as
+              though you had swiped there yourself.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Keep it running</h3>
+            <p>Turn on <b>Launch at Login</b> from the menu so your names are there after every restart.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <p><b>One thing to do after each launch:</b> visit each desktop once &mdash; swipe across them, or press
+          <code>Control</code> and the arrow keys. SpaceNamer learns where a desktop is the first time you visit it
+          after launching, and until then that desktop is listed but not clickable. This is the price of using only
+          public macOS APIs instead of asking for the Accessibility permission.</p>
+      </div>
+
+      <div>
+        <h2>Working with more than one display</h2>
+        <p class="measure muted">macOS gives every display its own set of desktops, so SpaceNamer does too. The menu
+          groups desktops under each display&rsquo;s name, with a checkmark on the one that is active on that display.
+          The menu bar itself shows the desktop on the display you are currently working in.</p>
+      </div>
+
+      <div>
+        <h2>What the menu bar shows</h2>
+        <div class="cards cards-3">
+          <div class="card">
+            <h3>Name and emoji</h3>
+            <p>Both appear together, so a glance tells you where you are. Either one on its own works fine too.</p>
+          </div>
+          <div class="card">
+            <h3>Long names shorten</h3>
+            <p>Names longer than 20 characters are truncated in the menu bar. The full name stays in the menu.</p>
+          </div>
+          <div class="card">
+            <h3>Plays nicely with others</h3>
+            <p>It is a single menu bar item and works alongside menu bar managers such as Bartender.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Where your names are stored</h2>
+        <ul class="prose">
+          <li>Names are tied to the desktop itself, not to its position &mdash; they follow a desktop when Mission
+            Control reorders it, and they survive a restart.</li>
+          <li>They are stored locally on each Mac. macOS identifies desktops differently on different machines, so a
+            second Mac starts with default names rather than syncing the first one&rsquo;s.</li>
+          <li>Nothing about your names ever leaves your Mac. See the <a href="privacy.html">privacy page</a>.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Your license</h2>
+        <p class="measure muted">One purchase covers <b>3 Macs</b>. Enter your key under <b>License&hellip;</b> in the
+          menu. Moving to a new machine? Open that menu on the old Mac and remove the license to free the seat, or do
+          it from the customer portal. Full details are on the <a href="support.html">support page</a>.</p>
+      </div>
+
+      <div>
+        <h2>If something looks wrong</h2>
+        <p class="measure muted">Start with <a href="support.html#troubleshooting">troubleshooting</a>. The two most
+          common cases: a desktop you have not visited since launching is not clickable yet, and Mission Control
+          rendering oddly is fixed by logging out and back in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="container cta">
+      <h2>Stop guessing which desktop you&rsquo;re on.</h2>
+      <p>One purchase, three Macs, no permissions, 30 days to change your mind.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a>
+        <a class="btn btn-secondary" href="download.html">Download for Apple silicon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

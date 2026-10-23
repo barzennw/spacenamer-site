@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download SpaceNamer for Apple silicon</title>
+  <meta name="description" content="Download SpaceNamer for macOS Ventura or later on Apple silicon. Signed and notarized; a $6.99 license key unlocks it on three Macs.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="Download SpaceNamer for Apple silicon">
+  <meta property="og:description" content="Download SpaceNamer for macOS Ventura or later on Apple silicon. Signed and notarized; a $6.99 license key unlocks it on three Macs.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/download.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Download SpaceNamer for Apple silicon">
+  <meta name="twitter:description" content="Download SpaceNamer for macOS Ventura or later on Apple silicon. Signed and notarized; a $6.99 license key unlocks it on three Macs.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Download</p>
+      <h1>SpaceNamer for Apple silicon.</h1>
+      <p class="lede">Free to download. It needs a license key to do anything &mdash; buy one in about thirty seconds, or paste the key you already have.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="dl-panel">
+        <a class="btn btn-primary" href="#" data-download download
+          data-download-label="Download coming soon">Download SpaceNamer</a>
+        <p class="caption" data-download-pending hidden>The notarized build is not posted yet. Buy a license now
+          and it will be waiting, or <a href="#" data-mailto>email us</a> and we will send a link the moment it is
+          live.</p>
+        <div class="dl-meta">
+          <span>Version <b data-cfg="version">3.1</b></span>
+          <span><b data-cfg="downloadSize"></b></span>
+          <span>Apple silicon &middot; macOS Ventura or later</span>
+          <span>Signed and notarized by Apple</span>
+        </div>
+        <p class="caption dl-hash">SHA-256 <span data-cfg="downloadSha256"></span></p>
+      </div>
+
+      <div>
+        <h2>What happens next</h2>
+        <div class="flow">
+          <div class="flow-item">
+            <div>
+              <h3>Install it</h3>
+              <p>Unzip, drag SpaceNamer into Applications, open it. It is notarized, so macOS lets it
+                straight through &mdash; no right-click tricks.</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div>
+              <h3>It asks for a license</h3>
+              <p>SpaceNamer is paid software with no trial. On first launch its menu offers
+                <b>Buy SpaceNamer&hellip;</b> and <b>Enter License&hellip;</b>, and nothing else works until a key
+                is in.</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div>
+              <h3>Buy a key, once</h3>
+              <p>$6.99, one payment, three Macs. Your key arrives by email and is also on your order page at
+                Kelviq, who handle the sale.</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div>
+              <h3>Paste it in</h3>
+              <p>Menu &rarr; <b>Enter License&hellip;</b> &rarr; paste &rarr; done. It activates this Mac and
+                keeps working offline from then on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a>
+        <a class="btn btn-secondary" href="guide.html">Read the guide</a>
+      </div>
+
+      <div class="note">
+        <p><b>Already bought it?</b> Your key is in your purchase email, and in the
+          <a href="#" data-portal>Kelviq customer portal</a>. Out of seats? Remove the license from a Mac you no
+          longer use &mdash; <b>License&hellip;</b> in its menu &mdash; and the seat comes back.</p>
+      </div>
+
+      <div>
+        <h2>Requirements</h2>
+        <ul class="prose">
+          <li>A Mac with Apple silicon. There is no Intel build &mdash; see
+            <a href="compatibility.html">compatibility</a>.</li>
+          <li>macOS Ventura (13) or later.</li>
+          <li>No Accessibility or Screen Recording permission, and no changes to System Integrity Protection.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>

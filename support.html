@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceNamer Support: Help, Troubleshooting and FAQ</title>
+  <meta name="description" content="Troubleshooting, frequently asked questions, license help and how to reach the developer of SpaceNamer.">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <!-- Social preview. og:image must be an ABSOLUTE url, so replace
+       SITE-URL-TODO.example with your domain across every page before launch. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpaceNamer">
+  <meta property="og:title" content="SpaceNamer Support: Help, Troubleshooting and FAQ">
+  <meta property="og:description" content="Troubleshooting, frequently asked questions, license help and how to reach the developer of SpaceNamer.">
+  <meta property="og:url" content="https://SITE-URL-TODO.example/support.html">
+  <meta property="og:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="SpaceNamer: give every Space a name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpaceNamer Support: Help, Troubleshooting and FAQ">
+  <meta name="twitter:description" content="Troubleshooting, frequently asked questions, license help and how to reach the developer of SpaceNamer.">
+  <meta name="twitter:image" content="https://SITE-URL-TODO.example/img/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="flat.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site-config.js"></script>
+  <script>
+    /* theme boot — runs before first paint so deep links never flash. Mirrors index.html. */
+    (function () {
+      var q = new URLSearchParams(location.search), r = document.documentElement, ls = null;
+      try { ls = localStorage } catch (e) { }
+      var mode = q.has('theme') ? q.get('theme') : (ls && ls.getItem('sn-mode')) || '';
+      if (mode) r.setAttribute('data-theme', mode);
+      var dz = q.has('design') ? q.get('design') : ((ls && ls.getItem('sn-des')) || '');
+      if (dz) r.setAttribute('data-design', dz);
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+          alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+          alt="SpaceNamer"></a>
+      <div class="links"><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a href="support.html" aria-current="page">Support</a><a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a></div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Support</p>
+      <h1>Stuck? Write to a human.</h1>
+      <p class="lede">SpaceNamer is made by one developer, and that is who answers your email. Most questions are already answered below.</p>
+    </div>
+  </header>
+
+  <section class="page-main">
+    <div class="container stack-8">
+      <div class="cards cards-3">
+        <div class="card">
+          <h3>Email support</h3>
+          <p><a href="#" data-mailto></a><br>
+            Replies within <span class="todo">[response time]</span> on working days.</p>
+        </div>
+        <div class="card">
+          <h3>Refunds</h3>
+          <p>30 days, no questions asked. Email the address above with your license key and the money goes back.</p>
+        </div>
+        <div class="card">
+          <h3>Your license</h3>
+          <p>Lost your key, or moving Macs? Open <b>License&hellip;</b> in the app, or use the
+            <a href="#" data-portal>Kelviq customer portal</a>.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2>Before you write</h2>
+        <p class="measure muted">Including these three things usually turns two emails into one:</p>
+        <ul class="prose">
+          <li>Your <b>SpaceNamer version</b> &mdash; it is at the bottom of the menu.</li>
+          <li>Your <b>macOS version</b> &mdash; Apple menu &rarr; About This Mac.</li>
+          <li>What you expected to happen, and what happened instead.</li>
+        </ul>
+      </div>
+
+      <div id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <div class="faq">
+        <details>
+          <summary>Clicking a desktop in the menu does nothing</summary>
+          <p>SpaceNamer learns where a desktop is the first time you visit it after launching. Until then it is listed
+            but cannot be clicked. Swipe across your desktops once &mdash; or press <code>Control</code> with the left
+            and right arrow keys &mdash; and they all become clickable.</p>
+        </details>
+
+        <details>
+          <summary>Mission Control looks wrong, or windows seem detached from their desktops</summary>
+          <p>This is a macOS state problem rather than a SpaceNamer one, and logging out and back in rebuilds it. If it
+            persists after that, restart the Mac and let us know.</p>
+        </details>
+
+        <details>
+          <summary>My names are missing on my second Mac</summary>
+          <p>Names are stored on each Mac separately, because macOS identifies desktops differently on different
+            machines. There is no sync, by design &mdash; nothing about your desktops leaves your computer. Name them
+            again on the second Mac and they will stay.</p>
+        </details>
+
+        <details>
+          <summary>The menu bar shows a name I did not set</summary>
+          <p>Names follow the desktop itself, not its position. If Mission Control has reordered your desktops, the
+            names travelled with them &mdash; which is usually what you want. Open <b>Rename Spaces&hellip;</b> to see
+            the current order.</p>
+        </details>
+
+        <details>
+          <summary>My license key is not accepted</summary>
+          <p>Check for a stray space at the start or end of the key, and that all three seats are not already in use.
+            Remove the license from a Mac you no longer use &mdash; <b>License&hellip;</b> in the menu &mdash; to free
+            a seat, then try again. Still stuck? Email the key and we will sort it out.</p>
+        </details>
+
+        </div>
+      </div>
+
+      <div>
+        <h2>Questions</h2>
+        <div class="faq">
+        <details>
+          <summary>Does it rename desktops inside Mission Control?</summary>
+          <p>No. macOS does not let any app change those labels without disabling system protections, and we will not
+            ask you to do that. Your names appear in the menu bar and in SpaceNamer&rsquo;s own menu, which is where
+            you look anyway.</p>
+        </details>
+
+        <details>
+          <summary>What permissions does it need?</summary>
+          <p>None. It never asks for Accessibility or Screen Recording, and it does not touch System Integrity
+            Protection.</p>
+        </details>
+
+        <details>
+          <summary>Will it survive the next macOS update?</summary>
+          <p>It reads desktop information the same way macOS does and switches desktops through public window focus, so
+            there is far less to break than in tools that fake keystrokes. Each new macOS release is tested the week
+            it ships and the result is published on the <a href="compatibility.html">compatibility page</a>.</p>
+        </details>
+
+        <details>
+          <summary>How many Macs can I use it on?</summary>
+          <p>Three. Moving to a new Mac? Remove the license on the old one from the License window, or free a seat from
+            the customer portal.</p>
+        </details>
+
+        <details>
+          <summary>Do my names survive a restart, or reordering desktops?</summary>
+          <p>Yes. Names are tied to each desktop itself rather than its position, so they follow the desktop when
+            Mission Control reorders it and after a restart.</p>
+        </details>
+
+        <details>
+          <summary>Does it work with multiple monitors?</summary>
+          <p>Yes. The menu shows one list per display, with a checkmark on each display&rsquo;s active desktop.</p>
+        </details>
+
+        <details>
+          <summary>Intel Macs?</summary>
+          <p>No. SpaceNamer runs on Apple silicon Macs with macOS Ventura or later. See the
+            <a href="compatibility.html">compatibility page</a>.</p>
+        </details>
+
+        <details>
+          <summary>Can I turn off the switching animation?</summary>
+          <p>Not today. SpaceNamer uses macOS&rsquo;s own switch, animation included.</p>
+        </details>
+
+        <details>
+          <summary>Is it notarized? What happens when I download it?</summary>
+          <p>Yes, it is signed and notarized by Apple. Unzip it, move it to Applications and open it &mdash; no
+            warnings and no right-click tricks.</p>
+        </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="container cta">
+      <h2>Stop guessing which desktop you&rsquo;re on.</h2>
+      <p>One purchase, three Macs, no permissions, 30 days to change your mind.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="index.html#pricing" data-buy>Buy for $6.99</a>
+        <a class="btn btn-secondary" href="download.html">Download for Apple silicon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-cols">
+        <div class="foot-col foot-col-brand">
+          <span class="foot-brand"><img class="logo-lockup logo-lockup-light" src="img/lockup-light.png" width="410" height="72"
+            alt="SpaceNamer"><img class="logo-lockup logo-lockup-dark" src="img/lockup-dark.png" width="410" height="72"
+            alt="SpaceNamer"></span>
+          <p>Name your desktops. Know where you are.</p>
+        </div>
+        <div class="foot-col"><b>Product</b><a href="guide.html">Guide</a><a href="compare.html">Compare</a><a
+            href="compatibility.html">Compatibility</a><a href="changelog.html">Changelog</a></div>
+        <div class="foot-col"><b>Help</b><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a
+            href="terms.html">Terms</a></div>
+      </div>
+      <div class="foot-bottom"><span class="foot-copy">&copy; 2026 SpaceNamer</span><span class="foot-req">macOS Ventura or
+          later &middot; Apple silicon</span></div>
+    </div>
+  </footer>
+
+  <script src="buy.js"></script>
+</body>
+
+</html>
