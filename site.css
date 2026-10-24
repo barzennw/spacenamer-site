@@ -303,3 +303,24 @@ th.col-own { color: var(--color-accent) }
 :root[data-theme="dark"] .logo-lockup-dark { display: block }
 .foot-brand .logo-lockup { height: 22px }
 @media (max-width: 420px) { .logo-lockup { height: 21px } }
+/* ---------- light/dark toggle ---------- */
+/* Two icons, swapped by the same three-state rule the lockup uses. The icon
+   shows the theme you will GET, not the one you are in: a moon while light,
+   a sun while dark. */
+.theme-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: none; width: 34px; height: 34px; padding: 0;
+  border: 1px solid var(--color-border); border-radius: 50%;
+  background: none; color: var(--color-fg-2); cursor: pointer;
+  transition: color var(--dur-fast), background var(--dur-fast), border-color var(--dur-fast)
+}
+.theme-btn:hover { color: var(--color-fg); background: var(--color-bg-2); border-color: var(--color-fg-3) }
+.theme-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px }
+.theme-btn .ti { display: block }
+.theme-btn .ti-sun { display: none }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-btn .ti-moon { display: none }
+  :root:not([data-theme="light"]) .theme-btn .ti-sun { display: block }
+}
+:root[data-theme="dark"] .theme-btn .ti-moon { display: none }
+:root[data-theme="dark"] .theme-btn .ti-sun { display: block }
