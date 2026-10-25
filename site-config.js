@@ -32,12 +32,12 @@ window.SPACENAMER = {
   /* Direct link to the notarized SpaceNamer zip. Anywhere that serves a stable
      URL works: GitHub Releases, R2, S3, your own host. While this is empty the
      download page says so plainly instead of offering a dead button. */
-  downloadUrl: "",
+  downloadUrl: "https://spacenamer.app/download/SpaceNamer-3.1.dmg",
 
   /* Shown next to the download button so people know what they are getting. */
   version: "3.1",
-  downloadSize: "",            /* e.g. "2.4 MB" */
-  downloadSha256: "",          /* optional, shown for verification */
+  downloadSize: "228 KB",            /* e.g. "2.4 MB" */
+  downloadSha256: "05d5675fa7dd12e8974a5a470752f2b2bdfcb689e82f3682841004e322d34976",          /* optional, shown for verification */
 
   /* --- Links ------------------------------------------------------------ */
 
