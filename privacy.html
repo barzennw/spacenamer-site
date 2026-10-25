@@ -4,6 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJZLGKE20Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WJZLGKE20Y');
+  </script>
   <title>SpaceNamer Privacy Policy</title>
   <meta name="description" content="SpaceNamer has no account, no analytics and no tracking. Your desktop names stay on your Mac; the only network request is a license check.">
   <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
@@ -54,7 +63,7 @@
     <div class="container">
       <p class="eyebrow">Privacy</p>
       <h1>SpaceNamer does not watch you.</h1>
-      <p class="lede">No account, no analytics, no tracking. The only time the app contacts a server is to check your license. Your desktop names never leave your Mac.</p>
+      <p class="lede">The app has no account, no analytics and no tracking &mdash; the only time it contacts a server is to check your license, and your desktop names never leave your Mac. This website uses Google Analytics; that is covered below.</p>
     </div>
   </header>
 
@@ -63,7 +72,7 @@
       <div class="with-toc">
         <aside class="toc"><b>On this page</b><a href="#summary">Summary</a><a href="#stays">What stays on your Mac</a><a href="#leaves">What leaves your Mac</a><a href="#payment">Payment</a><a href="#website">This website</a><a href="#not-collected">What is never collected</a><a href="#retention">How long it is kept</a><a href="#rights">Your rights</a><a href="#children">Children</a><a href="#changes">Changes</a><a href="#contact">Contact</a></aside>
         <div class="prose">
-          <p class="caption">Last updated 25 October 2026.</p>
+          <p class="caption">Last updated 26 October 2026.</p>
 
           <div class="note" style="margin:var(--space-6) 0">
             <p><b>This is a draft.</b> It describes accurately what the app does, but it has not been reviewed by a
@@ -72,9 +81,13 @@
           </div>
 
           <h2 id="summary">Summary</h2>
-          <p>SpaceNamer is a menu bar app that names your Mac&rsquo;s desktops. It has no account system, collects no
-            analytics and contains no tracking of any kind. The names and emoji you choose are stored on your own Mac
-            and are never transmitted anywhere. The single exception is license activation, described below.</p>
+          <p>SpaceNamer is a menu bar app that names your Mac&rsquo;s desktops. <strong>The app</strong> has no
+            account system, collects no analytics and contains no tracking of any kind. The names and emoji you
+            choose are stored on your own Mac and are never transmitted anywhere. The single exception is license
+            activation, described below.</p>
+          <p><strong>This website</strong> is a separate matter: it uses Google Analytics, which sets cookies and
+            reports your visit to Google. Details are in &ldquo;This website&rdquo; below. Nothing the website
+            measures has any connection to what you do inside the app.</p>
 
           <h2 id="stays">What stays on your Mac</h2>
           <p>All of the following is stored locally in SpaceNamer&rsquo;s preferences and never sent anywhere:</p>
@@ -108,14 +121,26 @@
 
           <h2 id="website">This website</h2>
           <p>This site is a set of static pages hosted by <strong>GitHub Pages</strong>, who as our host receive
-            the usual web-server request data, including your IP address. We run <strong>no analytics and no
-            tracking of any kind</strong> &mdash; there is no measurement script on any page. The site sets no
-            cookies. The only thing it stores in your browser is your choice of light or dark theme, kept in
-            <code>localStorage</code> on your own device and never sent anywhere.</p>
+            the usual web-server request data, including your IP address.</p>
+          <p>We use <strong>Google Analytics</strong> (GA4) to understand which pages people read and where
+            visitors come from. It sets cookies in your browser (named <code>_ga</code> and similar) and sends
+            Google information about your visit &mdash; pages viewed, approximate location derived from your IP
+            address, device and browser type, and how you arrived. We use it only in aggregate; we do not use it
+            to identify you, and we do not run advertising or remarketing on this site.</p>
+          <p>You can opt out with Google&rsquo;s
+            <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">browser add-on</a>, by blocking
+            cookies for this site, or with any content blocker. Nothing on this site stops working if you do.
+            Google&rsquo;s own handling of this data is covered by their
+            <a href="https://policies.google.com/privacy" rel="noopener">privacy policy</a>.</p>
+          <p>Separately from analytics, the site stores your choice of light or dark theme in
+            <code>localStorage</code> on your own device. That never leaves your browser.</p>
+          <p class="caption"><b>Note:</b> this is the website only. The SpaceNamer <em>app</em> contains no
+            analytics and no tracking of any kind &mdash; see the sections above.</p>
 
           <h2 id="not-collected">What is never collected</h2>
           <ul>
-            <li>No analytics, telemetry or usage statistics.</li>
+            <li>No analytics, telemetry or usage statistics <em>in the app</em>. (The website is separate &mdash;
+              see &ldquo;This website&rdquo;.)</li>
             <li>No crash reports sent automatically.</li>
             <li>No screen contents &mdash; the app never requests Screen Recording permission.</li>
             <li>No keystrokes &mdash; the app never requests Accessibility permission.</li>
