@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@kelviq/node-sdk": "^2.9.0"
+  }
+}
