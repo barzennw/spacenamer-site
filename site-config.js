@@ -45,5 +45,5 @@ window.SPACENAMER = {
   portalUrl: "",
 
   /* FILL IN. Support address used by the mailto: links. */
-  supportEmail: ""
+  supportEmail: "barzanwrk@gmail.com"
 };
