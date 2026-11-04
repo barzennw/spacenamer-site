@@ -44,6 +44,6 @@ window.SPACENAMER = {
   /* FILL IN. Kelviq's customer portal, where buyers manage their license. */
   portalUrl: "",
 
-  /* FILL IN. Support address used by the mailto: links. */
-  supportEmail: "barzanwrk@gmail.com"
+  /* Support address used by every mailto: link on the site. */
+  supportEmail: "support@spacenamer.app"
 };
