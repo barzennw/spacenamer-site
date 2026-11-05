@@ -38,7 +38,7 @@
     /* Default the success page to this site, so the same config works on
        localhost, a staging host and the real domain without editing. */
     var success = cfg.successUrl ||
-      (location.origin !== "null" ? location.origin + "/thanks.html" : "");
+      (location.origin !== "null" ? location.origin + "/thanks/" : "");
     if (success) q.set("success_url", success);
 
     return url.toString();

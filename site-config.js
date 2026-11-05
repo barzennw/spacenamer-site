@@ -24,7 +24,7 @@ window.SPACENAMER = {
   chargePeriod: "ONE_TIME",
 
   /* Where Kelviq sends the buyer after a successful payment. Leave empty to
-     use <this site>/thanks.html, which is almost always what you want. */
+     use <this site>/thanks/, which is almost always what you want. */
   successUrl: "",
 
   /* --- Download --------------------------------------------------------- */
