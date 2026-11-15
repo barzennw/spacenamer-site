@@ -36,8 +36,8 @@ window.SPACENAMER = {
 
   /* Shown next to the download button so people know what they are getting. */
   version: "1.0.6",
-  downloadSize: "2.9 MB",            /* e.g. "2.4 MB" */
-  downloadSha256: "c5411952215172d4381268be8fd57552b2270fc6e781b7f0bde9e1c350b5af20",          /* optional, shown for verification */
+  downloadSize: "3.0 MB",            /* e.g. "2.4 MB" */
+  downloadSha256: "922bbfe9e83e938940987a7e57e185164913aa4df20d0d9259f2af578be31e4b",          /* optional, shown for verification */
 
   /* --- Links ------------------------------------------------------------ */
 
